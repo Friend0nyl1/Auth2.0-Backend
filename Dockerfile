@@ -23,10 +23,10 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 
 # Expose the port your API runs on (default for ASP.NET Core is 80)
-EXPOSE 80
+EXPOSE 8080
 
 
-ENV ASPNETCORE_URLS="http://+:80"
+ENV ASPNETCORE_URLS="http://+:8080"
 # Set the entry point for the application
 # Assuming your output assembly name is auth.dll based on auth.csproj
 ENTRYPOINT ["dotnet", "auth.dll"]
