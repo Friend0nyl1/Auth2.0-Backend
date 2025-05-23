@@ -78,7 +78,7 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder.AllowAnyOrigin()
-                    .WithOrigins(["https://labtools-chi.vercel.app","http://localhost:8081"]) // Allow only this origin
+                    .WithOrigins(["https://labtools-chi.vercel.app","http://localhost:8081" , "http://localhost:8080"]) // Allow only this origin
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
